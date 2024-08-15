@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(to bottom, #FFCCCB, #FF69B4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            padding: 50px;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #FF1493;
+            transform: rotate(-45deg);
+            animation: pulse 1s infinite;
+        }
+
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #FF1493;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 25px;
+            top: 0;
+        }
+
+        .heart.left {
+            left: -70px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+
+        .heart.right {
+            right: -70px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+
+        .cake {
+            width: 150px;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            opacity: 1;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: -10px;
+            opacity: 1;
+        }
+
+        .quote {
+            font-size: 1.2em;
+            margin-top: 20px;
+            line-height: 1.5;
+            opacity: 1;
+            position: relative;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        .signature::before {
+            content: "- ";
+        }
+
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: #FFA500;
+            border-radius: 50%;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .balloon::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 50px;
+            background-color: #fff;
+            left: 50%;
+            bottom: -50px;
+            transform: translateX(-50%);
+        }
+
+        .balloon.left {
+            left: -50px;
+            top: 10px;
+            animation-delay: 0s;
+        }
+
+        .balloon.right {
+            right: -50px;
+            top: 10px;
+            animation-delay: 2s;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart left"></div>
+        <div class="heart right"></div>
+        <h1>Happy Birthday, My Love!</h1>
+<h2>03 October 2024</h2>
+
+        <img src="C:\Users\Shantanu Sarkar\Desktop\birthday cake.jpg" alt="Birthday Cake" class="cake">
+                <div class="quote">
+            <div class="balloon left"></div>
+            <div class="balloon right"></div>
+            <p>"You are the love of my life, the one who makes every moment special. Wishing you the happiest birthday, filled with love and joy. You mean the world to me, and I promise to make every day as beautiful as you are."</p>
+        </div>
+        <p class="signature">Shantanu Sarkar</p>
+    </div>
+</body>
+</html>
